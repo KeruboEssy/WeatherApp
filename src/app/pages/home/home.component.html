@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="search-wrapper">
+        <div class="w-25">
+            <form
+            [formGroup]="weatherSearchForm" (ngSubmit)="searchWeather(weatherSearchForm.value)">
+            <input formControlName='location' class="form-control" type="text" placeholder="Search">
+            <!-- <button type="submit" class="btn btn-success btn-md"> Search for the weather</button> -->
+            </form>
+        </div>
+    </div>
+    <!-- Weather details -->
+    <h3>{{city}}</h3>
+    <p>Our Recommendation : <span>Carry an umbrella</span></p>
+    <div class="weather-content-wrapper">
+        <div class="weather">
+            <div class="icon">
+                <div class="iconi"></div>
+                <h2>{{weatherData.main.temp}}K</h2>
+                <!-- <h2>25°c</h2> -->
+            </div>
+            <div class="condition">
+                <p>Precipitation {{weatherData.rain['1h'] * 100}}% </p>
+                <p>Humidity: {{weatherData.main.humidity}}%</p>
+                <p>Wind: {{weatherData.wind.speed}}km/hr</p>                
+            </div>
+        </div>
+        <div class="summary">
+            <h3> <b>Weather</b></h3>
+            <p>{{day}}</p>
+            <p>{{weatherData.weather[0].description}}</p>
+        </div>
+    </div>
+    
+</div>
+
+<!-- 5 DAY FORECAST COMPONENT -->
+<div>
+
+</div>

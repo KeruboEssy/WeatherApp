@@ -1,0 +1,35 @@
+.search-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+input{
+    border-radius: 50px;
+}
+.iconi {
+    background: url('https://api.iconify.design/ion/partly-sunny-sharp.svg') no-repeat center center / contain;
+    content: url('https://api.iconify.design/ion/partly-sunny-sharp.svg');
+    width: 90px;
+}
+.weather-content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.weather {
+    display: flex;
+}
+.icon {
+    display: flex;
+    margin-right: 40px;
+}
+.summary {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.ml-3{
+    margin-left: 6px;
+}

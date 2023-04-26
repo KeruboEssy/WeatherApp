@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'WeatherApp';
+  value = 1;
+  add() {
+    this.value = this.value+1;
+  }
 }
