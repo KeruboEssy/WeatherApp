@@ -10,12 +10,14 @@ import { HttpClientModule } from '@angular/common/http';
 // import { ApixuService } from "./services/apixu.service";
 import { HomeComponent } from './pages/home/home.component';
 import { WeatherApiService } from './services/weather-api.service';
+import { WeatherForecastComponent } from './components/weather-forecast/weather-forecast.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WeatherComponent,
-    HomeComponent
+    HomeComponent,
+    WeatherForecastComponent
   ],
   imports: [
     BrowserModule,

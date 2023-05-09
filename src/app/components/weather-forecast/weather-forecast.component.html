@@ -1,0 +1,24 @@
+<div class="tabs pointer" >
+    <h4 (click)="switchTabs('temp')" [ngClass]="{'tab-active' : option === 'temp'}" class=" tab">Temperature</h4>
+    <h4 (click)="switchTabs('precip')" [ngClass]="{'tab-active' : option === 'precip'}" class="tab">Precipitation</h4>
+    <h4 (click)="switchTabs('wind')"[ngClass]="{'tab-active' : option === 'wind'}"  class="tab">Wind</h4>
+</div>
+<div class="fiveday">
+    <div class="day pointer active">
+        <h5>Mon</h5>
+        <p>icon</p>
+        <div class="temp">
+            <p>25°</p>
+            <p>16°</p>
+        </div>
+    </div>   
+</div>
+
+<!-- Days Data -->
+<h3>list items</h3>
+<!-- {{weatherData2}} -->
+<ul>
+    <li  *ngFor="let item of weatherData;">
+        {{item.dt_txt}}
+    </li>
+</ul>

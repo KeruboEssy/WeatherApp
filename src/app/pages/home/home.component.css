@@ -7,10 +7,10 @@
 input{
     border-radius: 50px;
 }
-.iconi {
-    background: url('https://api.iconify.design/ion/partly-sunny-sharp.svg') no-repeat center center / contain;
-    content: url('https://api.iconify.design/ion/partly-sunny-sharp.svg');
-    width: 90px;
+#wicon {
+    /* background: url('https://api.iconify.design/ion/partly-sunny-sharp.svg') no-repeat center center / contain;
+    content: url('https://api.iconify.design/ion/partly-sunny-sharp.svg'); */
+    width: 120px;
 }
 .weather-content-wrapper {
     display: flex;
@@ -32,4 +32,5 @@ input{
 }
 .ml-3{
     margin-left: 6px;
+    cursor: pointer;
 }

@@ -1,4 +1,4 @@
-<div class="container">
+<div *ngIf="weatherData" class="container" >
     <div class="search-wrapper">
         <div class="w-25">
             <form
@@ -8,14 +8,39 @@
             </form>
         </div>
     </div>
+    <!-- {{weatherData2}} -->
     <!-- Weather details -->
     <h3>{{city}}</h3>
     <p>Our Recommendation : <span>Carry an umbrella</span></p>
     <div class="weather-content-wrapper">
         <div class="weather">
             <div class="icon">
-                <div class="iconi"></div>
-                <h2>{{weatherData.main.temp}}K</h2>
+                <div class="">
+                    <div id="icon"><img id="wicon" [src]="iconurl" alt="Weather icon"></div>
+                </div>
+                <h2>{{temp?.toFixed(1)}}</h2>
+                <div (click)="calculateTemp('C')" class="ml-3">°C |</div>
+                <div (click)="calculateTemp('F')" class="ml-3">°F</div>
                 <!-- <h2>25°c</h2> -->
             </div>
-           
+            
+            <div class="condition">
+                <p>Precipitation {{precip}}% </p>
+                <p>Humidity: {{weatherData?.main?.humidity}}%</p>
+                <p>Wind: {{weatherData?.wind?.speed}}km/hr</p>                
+            </div>
+        </div>
+        <div class="summary">
+            <h3> <b>Weather</b></h3>
+            <p>{{day}}</p>
+            <p>{{weatherData?.weather[0].description}}</p>
+            
+        </div>
+    </div>
+    
+</div>
+
+<!-- 5 DAY FORECAST COMPONENT -->
+<div class="container" >
+    <app-weather-forecast></app-weather-forecast>
+</div>

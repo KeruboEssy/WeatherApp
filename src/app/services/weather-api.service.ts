@@ -15,5 +15,10 @@ export class WeatherApiService {
     const url =`${this.apiUrl}weather?q=${city}&appid=${this.apiKey}`;
     return this.http.get(url);
   }
+  geForecast(city: string): Observable<any> {
+    const url = `${this.apiUrl}forecast?q=${city}&appid=${this.apiKey}`;
+    return this.http.get(url);
+  }
+
 
 }
