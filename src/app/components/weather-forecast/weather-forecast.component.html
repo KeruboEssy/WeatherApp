@@ -4,8 +4,50 @@
     <h4 (click)="switchTabs('wind')"[ngClass]="{'tab-active' : option === 'wind'}"  class="tab">Wind</h4>
 </div>
 <div class="fiveday">
-    <div class="day pointer active">
-        <h5>Mon</h5>
+    <div class="day pointer" (click)="getSelectedData('2023-05-18')" >
+        <h5>
+            {{today}}
+        </h5>
+        <p>icon</p>
+        <div class="temp">
+            <p>25°</p>
+            <p>16°</p>
+        </div>
+    </div>   
+    <div class="day pointer">
+        <h5>
+            {{day2}}
+        </h5>
+        <p>icon</p>
+        <div class="temp">
+            <p>25°</p>
+            <p>16°</p>
+        </div>
+    </div>   
+    <div class="day pointer">
+        <h5>
+            {{day3}}
+        </h5>
+        <p>icon</p>
+        <div class="temp">
+            <p>25°</p>
+            <p>16°</p>
+        </div>
+    </div>   
+    <div class="day pointer">
+        <h5>
+            {{day4}}
+        </h5>
+        <p>icon</p>
+        <div class="temp">
+            <p>25°</p>
+            <p>16°</p>
+        </div>
+    </div>   
+    <div class="day pointer">
+        <h5>
+            {{day5}}
+        </h5>
         <p>icon</p>
         <div class="temp">
             <p>25°</p>
@@ -18,7 +60,7 @@
 <h3>list items</h3>
 <!-- {{weatherData2}} -->
 <ul>
-    <li  *ngFor="let item of weatherData;">
+    <li  *ngFor="let item of currentForecast;">
         {{item.dt_txt}}
     </li>
 </ul>

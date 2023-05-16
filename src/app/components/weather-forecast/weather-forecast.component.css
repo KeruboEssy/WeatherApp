@@ -9,7 +9,7 @@ p{
 .fiveday {
     display: flex;
     justify-content: space-between;
-    width: 500px;
+    width: 700px;
 }
 .active {
     background-color: rgb(220, 220, 220);
@@ -21,7 +21,7 @@ p{
     border-bottom: 4px solid #FFCF0E;
 }
 .day{
-    width: 80px;
+    width: 90px;
     height: 120px;
     margin-top: 20px;
     margin-bottom: 20px;
